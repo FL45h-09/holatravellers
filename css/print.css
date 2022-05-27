@@ -1,0 +1,136 @@
+/*** GLOBAL SETTING ***/
+body {margin:0; padding:0; font:normal 18px 'Poppins', sans-serif; color:#000; line-height:normal; scroll-behavior: smooth;}
+
+/*** GLOBAL SELECTORS ***/
+a{ color:#c81221; }
+a:hover{ color:#000;} 
+
+/*Main Content*/
+.container{width:1290px; margin:0 auto;}
+
+/* font-family: 'Dancing Script', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Righteous', sans-serif; */
+
+.owl-carousel, .owl-carousel .owl-item { -webkit-tap-highlight-color:transparent; position:relative } 
+.owl-carousel { display:none; width:100%; z-index:1;}
+.owl-carousel .owl-stage { position:relative; -ms-touch-action:pan-Y; touch-action:manipulation; -moz-backface-visibility:hidden }
+.owl-carousel .owl-stage:after { content:"."; display:block; clear:both; visibility:hidden; line-height:0; height:0 }
+.owl-carousel .owl-stage-outer { position:relative; overflow:hidden; -webkit-transform:translate3d(0, , 0)}
+.owl-carousel .owl-item, .owl-carousel .owl-wrapper { -webkit-backface-visibility:hidden; -moz-backface-visibility:hidden; -ms-backface-visibility:hidden; -webkit-transform:translate3d(0, 0, 0); -moz-transform:translate3d(0, 0, 0); -ms-transform:translate3d(0, 0, 0)}
+.owl-carousel .owl-item {  float:left; -webkit-backface-visibility:hidden; -webkit-touch-callout:none}
+.owl-carousel .owl-item img { display:block; width:auto; max-width:100%; }
+.owl-carousel .owl-dots.disabled, .owl-carousel .owl-nav.disabled {display:none}
+.no-js .owl-carousel, .owl-carousel.owl-loaded {display:block}
+.owl-carousel .owl-dot, .owl-carousel .owl-nav .owl-next, .owl-carousel .owl-nav .owl-prev { cursor:pointer; -webkit-user-select:none; -khtml-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none}
+.owl-carousel.owl-loading { opacity:0; display:block;}
+.owl-carousel.owl-hidden {opacity:0;}
+.owl-carousel.owl-refresh .owl-item {visibility:hidden;}
+.owl-carousel.owl-drag .owl-item {-ms-touch-action:pan-y; touch-action:pan-y; -webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none }
+.owl-carousel.owl-grab { cursor:move; cursor:grab }
+.owl-carousel.owl-rtl {direction:rtl}
+.owl-carousel.owl-rtl .owl-item {float:right}
+.owl-carousel .animated {animation-duration:1s;animation-fill-mode:both}
+.owl-carousel .owl-animated-in {z-index:0}
+.owl-carousel .owl-animated-out {z-index:1}
+.owl-carousel .fadeOut {animation-name:fadeOut}
+
+/* Feel free to change duration  */ 
+.animated  { -webkit-animation-duration : 1000 ms  ; animation-duration : 1000 ms  ; -webkit-animation-fill-mode : both  ; animation-fill-mode : both  ;}  
+/* .owl-animated-out - only for current item */ 
+/* This is very important class. Use z-index if you want move Out item above In item */ 
+.owl-animated-out {  z-index : 1    }
+/* .owl-animated-in - only for upcoming item
+/* This is very important class. Use z-index if you want move In item above Out item */ 
+.owl-animated-in {  z-index : 0    }
+/* .fadeOut is style taken from Animation.css and this is how it looks in owl.carousel.css:  */ 
+.fadeOut  {  -webkit-animation-name : fadeOut  ;  animation-name : fadeOut  ;}  
+@-webkit-keyframes  fadeOut  {
+  0% {
+    opacity : 1   ;
+  }  
+  100% {
+    opacity : 0   ;
+  }  
+}
+@keyframes  fadeOut  {
+  0% {
+    opacity : 1   ;
+  }  
+  100% {
+    opacity : 0   ;
+  }  
+}
+
+@keyframes smoothScroll {
+	0% {
+		transform: translateX(-100px);
+	}
+	100% {
+		transform: translateX(0px);
+	}
+}
+
+@keyframes ticker {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+
+    }
+    100% {
+        -webkit-transform: translate3d(-100%, 100%, 0);
+                transform: translate3d(-100%, 100%, 0);
+    }
+}
+
+/* Custom css Starts here */
+/* .dancingscp{font-family: 'Dancing Script', sans-serif;} */
+h3.title{font-family: 'Oswald', sans-serif; font-size: 48px; line-height: normal; font-weight: 700; color: #000;}
+h3.border{position: relative; padding-bottom: 25px;}
+h3.border::before{content: ""; position: absolute; width: 13%; height: 5px; left: 50%; bottom: 0; transform: translateX(-50%); background: #ffc4bc;}
+
+.herosection{position: relative; background: url(../images/banner.jpg) no-repeat center center; background-size: cover; padding: 390px 0;}
+.herosection::before{content: ""; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(0,37,79,.7) 24%);}
+.herosection .container{position: relative; z-index: 1;}
+
+.bannersection{height: calc(100vh - 40px); padding: 20px 0; background: url(../images/banner_img.jpg) no-repeat center bottom; background-size: cover; position: relative;}
+.bannersection::before{content: ""; position: absolute; width: 100%; height: 100%; left: 0; top: 0; background: rgba(0, 0, 0, .55);}
+.bannersection::after{content: ""; position: absolute; width: 100%; height: 100%; left: 0; bottom: 0; background: url(../images/clouds_img.png) no-repeat bottom; background-size: contain;}
+.headersection{position: relative; z-index: 1;}
+.headersection ul { margin-left: -30px; text-align: center;}
+.headersection ul li{display: inline-block; box-sizing: border-box; vertical-align: middle; margin-left: 30px;}
+.headersection ul li a{font-size: 17px; line-height: normal; font-weight: 500; color: #fff;}
+.headersection ul li a:hover{color: #ffc4bc;}
+
+.bannercaption{position: relative; text-align: center; display: flex; height: calc(100vh - 80px); place-items: center; z-index: 1;}
+.bannercaption h3{font-size: 55px; line-height: 45px; font-weight: 700; color: #fff; font-family: 'Spectral', serif;}
+.bannercaption .captiontxt{display: inline-block; box-sizing: border-box; vertical-align: middle;}
+.bannercaption .bannerslider{margin-right: 10px;}
+
+.searchbarsectoin{margin-top: -15px; margin-bottom: 50px;}
+.searchsec {width: 40%; margin: 0 auto;  position: relative; z-index: 99;}
+.searchsec input[type="text"]{padding: 10px 45px 10px 15px; border: 0; outline: 0; border: 1px solid #838383; border-radius: 5px; width: 100%; box-sizing: border-box; position: relative; font-size: 16px;}
+.searchsec .btn{position: absolute; right: 15px; top: calc(50% - 10px); width: 20px; height: 20px; background: url(../images/search_icon.png) no-repeat; background-size: cover; z-index: 1; font-size: 0; outline: 0; border: 0; cursor: pointer;}
+
+/*Featured blogs section*/
+.featuredblogsection  {padding: 50px 0;}
+.featuredblogsection h3{display: block; text-align: center; margin-bottom: 45px; position: relative;}
+.featuredblogsection ul {display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px; grid-template-rows: repeat(4, 1fr);}
+.featuredblogsection ul li{ box-sizing: border-box; vertical-align: top; grid-row: span 2; grid-column: span 1; aspect-ratio: 1 / 1.33; border-radius: 10px; overflow: hidden; position: relative;}
+.featuredblogsection ul li:nth-child(n + 4):nth-child(-n+5){margin-top: -80px;}
+.featuredblogsection ul li .imgbox{position: relative;}
+.featuredblogsection ul li .imgbox::before{content: ""; position: absolute; width: 100%; height: 100%; left: 0; top: 0; background: rgba(0, 0, 0, .55); z-index: 1;}
+.featuredblogsection ul li .imgbox img{ max-width: 100%; height: 100%; object-fit: cover; aspect-ratio: 1 / 1.33; transform: scale(1); transition: all .3s linear; z-index: 0; position: relative;}
+.featuredblogsection ul li:hover img{transform: scale(1.02);}
+
+.featuredblogsection ul li .blogsec{position: absolute; left: 0; bottom: 0; right: 0; width: 100%; padding: 30px; background-size: cover; box-sizing: border-box; z-index: 1;}
+.featuredblogsection ul li:first-child, .featuredblogsection ul li:last-child{grid-column: span 2; aspect-ratio: 2 / 1;}
+.featuredblogsection ul li:first-child .imgbox img, .featuredblogsection ul li:last-child .imgbox img{aspect-ratio: 2 / 1;}
+/* .featuredsection ul li:last-child{grid-column: 4 / span 2; grid-row: 4/ span 2;} */
+
+.featuredblogsection ul li .blogsec h4, .featuredblogsection ul li .blogsec h4 a{font-size: 22px; line-height: normal; font-weight: 600; color: #fff;}
+.featuredblogsection ul li .blogsec h4 a:hover{color: #ffc4bc;}
+.featuredblogsection ul li .blogsec p{font-size: 18px; line-height: normal; font-weight: 400; color: #fff; margin-top: 15px;}
+.featuredblogsection ul li .blogsec .btnsec{margin-top: 15px;}
+.featuredblogsection ul li .blogsec .btnsec .btn{display: inline-block; font-size: 18px; line-height: normal; font-weight: 600; color: #fff; padding: 10px 15px; background: #ffc4bc; border-radius: 8px;}
+.featuredblogsection ul li .blogsec .btnsec .btn:hover{color: #000;}
